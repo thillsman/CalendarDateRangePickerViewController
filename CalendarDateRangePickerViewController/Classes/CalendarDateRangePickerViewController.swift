@@ -58,11 +58,11 @@ public class CalendarDateRangePickerViewController: UICollectionViewController {
         self.navigationItem.rightBarButtonItem?.isEnabled = selectedStartDate != nil && selectedEndDate != nil
     }
     
-    func didTapCancel() {
+    @objc func didTapCancel() {
         delegate.didCancelPickingDateRange()
     }
     
-    func didTapDone() {
+    @objc func didTapDone() {
         if selectedStartDate == nil || selectedEndDate == nil {
             return
         }
